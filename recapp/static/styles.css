@@ -1,0 +1,242 @@
+/* Réinitialiser les styles par défaut des balises */
+body, h1, h2, h3, p, ul, li, form {
+    margin: 0;
+    padding: 0;
+}
+
+/* Utilisation de la police 'Roboto'  */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Style de la barre de navigation */
+nav {
+    background-color: #007bff; /* Couleur principale de Monoprix */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff; /* Couleur du texte en haut */
+}
+
+/* Modifier la taille du logo Monoprix dans la barre de navigation */
+.navbar-brand img {
+    max-height: 40px;
+}
+main {
+    margin-top: 1px; /* Ajuster la valeur selon votre préférence */
+}
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem; /* Réduire la taille des titres */
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333; /* Couleur plus sombre pour les titres */
+}
+h3.search-title {
+    margin-top: 16px;   
+}
+
+/* Style pour la case à cocher personnalisée */
+.checked-marker {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #2DAE54; /* Couleur verte pour la case cochée */
+    border-radius: 3px;
+}
+
+/* Pseudo-classe ::before pour la case cochée */
+.checked-marker::before {
+    content: "\f00c"; /* Code Unicode pour une case cochée (utilisation de Font Awesome) */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 10px;
+    color: #fff; /* Couleur blanche pour l'icône cochée */
+    display: block;
+    text-align: center;
+    line-height: 12px;
+}
+
+.nav-item {
+    margin-right: 20px;
+}
+
+/* Changer la taille des titres principaux */
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+#dataset2Search,
+#dataset3Search {
+    display: none;
+}
+.product-row {
+    display: flex;
+    justify-content: center; /* Centrer horizontalement les produits */
+}
+
+/* Réduire la taille des produits */
+.product {
+    position: relative;
+    border: 1px solid #e1e1e1;
+    flex-basis: calc(33.33% - 10px);
+    margin: 10px;
+    padding: 5px; /* Réduction de la taille du padding */
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    /* Ajoutez les propriétés suivantes pour réduire la largeur */
+    max-width: 220px; /* Définissez la largeur maximale que vous souhaitez */
+    width: 100%; /* Assurez-vous que le produit occupe la largeur disponible */
+    height: 135px;
+}
+
+.product h2 {
+    font-size: 0.9rem; /* Réduction de la taille de la police pour les titres */
+    margin-bottom: 5px;
+}
+
+.product p {
+    font-size: 0.7rem; /* Réduction de la taille de la police pour le texte */
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Changer la taille de la police pour les boutons */
+.btn {
+    font-size: 0.8rem;
+    
+}
+
+/* Appliquer un style visuel aux boutons */
+.btn-primary {
+    
+    background-color: #ed1f26; /* Une nuance légèrement plus sombre */
+    border-color: #ddd;
+}
+
+.btn-primary:hover {
+    background-color: #ed1f26; /* Une nuance encore plus sombre au survol */
+    border-color: #ddd;
+}
+
+/* Boutons de pagination */
+.pages {
+    
+    display: flex;
+    align-items: center;
+    z-index: 1; /* Placez la pagination au-dessus du contenu */
+    justify-content: center; /* Centrer horizontalement */
+    margin-top: 20px; 
+    
+}
+
+.page-item {
+  margin: 0 5px;
+}
+
+.page-item a {
+  display: inline-block;
+  padding: 8px 12px;
+  color: #ed1f26;
+  text-decoration: none;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.page-item a:hover {
+  background-color: #ed1f26;
+  color: #fff;
+  border-color: #ed1f26;
+}
+
+.page-item.active a {
+  background-color: #ed1f26;
+  color: #fff;
+  border-color: #ed1f26;
+}
+
+/* Style pour le message d'alerte */
+.swal2-popup {
+    font-size: 1rem;
+}
+
+.swal2-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.swal2-icon {
+    font-size: 2rem;
+}
+
+.swal2-confirm {
+    background-color: #ed1f26;
+}
+
+.swal2-cancel {
+    background-color: #ccc;
+}
+
+/* Ajoutez la propriété 'position: fixed' pour le footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #e91e63; /* Nouvelle couleur de fond (#e91e63) */
+    color: #fff;
+    padding: 10px 0;
+}
+.footer-monoprix {
+    background-color: #ed1f26; /* Rouge de Monoprix */
+}
+main {
+    margin-bottom: 60px; /* Ajustez cette valeur en fonction de la hauteur de votre footer */
+}
+.form-control {
+    border-radius: 30px; /* Bordures arrondies */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+/* Style pour les boutons "Rechercher" */
+.btn-primary {
+    border-radius: 30px; /* Bordures arrondies */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.notification-icon {
+    position: relative;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.notification-icon i {
+    font-size: 24px;
+    background-color: transparent; /* Set the background color of the icon to transparent */
+    color: #7f060a; /* Set the color of the icon to your desired color */
+    padding: 4px 8px;
+    border-radius: 50%;
+}
+
+.notification-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ed1f26; /* Set the background color for the numeric counter */
+    color: #fff; /* Set the color for the numeric counter */
+    font-size: 9px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 50%;
+    display: none; /* Hide the counter by default */
+}
