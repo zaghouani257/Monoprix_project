@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recherche</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 border-right">
+                <h2 class="text-center">Recherche dans Monoprix</h2>
+                <form id="dataset1Form" action="/recommend/" method="get">
+                    {% csrf_token %}
+                    <div class="form-row align-items-center">
+                        <div class="col">
+                            <input type="hidden" name="dataset_number" value="1">
+                            <div class="form-group mb-2">
+                                <input type="text" class="form-control" name="keyword" placeholder="Enter keyword">
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary mb-2">Rechercher</button>
+                        </div>
+                    </div>
+                </form>
+                <div id="results1"></div>
+                <div id="pagesWrapper1"></div>
+            </div>
+            <div class="col-sm-6">
+                <h1 class="text-center">Sélectionnez le magasin</h1>
+                <select id="datasetSelection" class="form-control">
+                    <option value="">Choisir :</option>
+                    <option value="2">Carrefour</option>
+                    <option value="3">Founa</option>
+                </select>
+                <div id="dataset2Search">
+                    <form id="dataset2Form" action="/recommend/" method="get">
+                        {% csrf_token %}
+                        <div class="form-row align-items-center">
+                            <div class="col">
+                                <input type="hidden" name="dataset_number" value="2">
+                                <div class="form-group mb-2">
+                                    <input type="text" class="form-control" name="keyword" placeholder="Enter keyword">
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <button type="submit" class="btn btn-primary mb-2">Rechercher</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="results2"></div>
+                    <div id="pagesWrapper2"></div>
+                </div>
+                <div id="dataset3Search">
+                    <form id="dataset3Form" action="/recommend/" method="get">
+                        {% csrf_token %}
+                        <div class="form-row align-items-center">
+                            <div class="col">
+                                <input type="hidden" name="dataset_number" value="3">
+                                <div class="form-group mb-2">
+                                    <input type="text" class="form-control" name="keyword" placeholder="Enter keyword">
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <button type="submit" class="btn btn-primary mb-2">Rechercher</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="results3"></div>
+                    <div id="pagesWrapper3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'scripts.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
